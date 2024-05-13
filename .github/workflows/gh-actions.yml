@@ -1,0 +1,28 @@
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - develop
+      - testing
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set environment variable based on branch
+        run: |
+          if [[ $GITHUB_REF == 'refs/heads/develop' ]]; then
+            echo "ENVIRONMENT_NAME=develop" >> $GITHUB_ENV
+          elif [[ $GITHUB_REF == 'refs/heads/testing' ]]; then
+            echo "ENVIRONMENT_NAME=testing" >> $GITHUB_ENV
+          fi
+
+      - name: Build and deploy
+        run: |
+          # Aquí va tu comando para construir y desplegar la aplicación
+          # Por ejemplo, construir la imagen de Docker y desplegarla en AWS ECS
