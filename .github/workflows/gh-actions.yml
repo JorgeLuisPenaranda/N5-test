@@ -22,7 +22,11 @@ jobs:
             echo "ENVIRONMENT_NAME=testing" >> $GITHUB_ENV
           fi
 
-      - name: Build and deploy
-        run: |
-          # Aquí va tu comando para construir y desplegar la aplicación
-          # Por ejemplo, construir la imagen de Docker y desplegarla en AWS ECS
+      - name: Build Docker image
+        run: docker build -t n5-test .
+
+      - name: Tag Docker image
+        run: docker tag your-image-name:latest public.ecr.aws/w6r4j2i8/n5-test-public/n5-test:latest
+
+      - name: Push Docker image to AWS ECR
+        run: docker push public.ecr.aws/w6r4j2i8/n5-test-public/n5-test:latest
