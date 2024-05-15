@@ -25,18 +25,9 @@ jobs:
             echo "EN TEST"
           elif [[ $GITHUB_REF == 'refs/heads/main' ]]; then
             echo "ENVIRONMENT_NAME=main" >> $GITHUB_ENV
-            tests=16
-            echo "Tests=$tests" >> $GITHUB_ENV
-            echo $Tests
-            echo "EN MAIN"
-            echo "ENVIRONMENT_NAME1 is set to $ENVIRONMENT_NAME"
-            echo ${{ env.ENVIRONMENT_NAME }}
-            echo "${{ env.Tests }} tests failed on CI"
           fi
-          echo "ENVIRONMENT_NAME2 is set to $ENVIRONMENT_NAME"
-          echo "RAW:  $GITHUB_REF"
 
-      - name: Set environment variable based on branch
+      - name: Check environment variable
         run: |
           echo "ENVIRONMENT_NAME var is set to $ENVIRONMENT_NAME"      
 
