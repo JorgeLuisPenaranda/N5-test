@@ -9,7 +9,7 @@ const server = http.createServer((req, res) => {
   const environmentName = process.env.ENVIRONMENT_NAME || 'Desconocido';
 
   // Mostrar el nombre del ambiente en la respuesta
-  res.end(`El ambiente ...actual es: : ${environmentName}`);
+  res.end(`El ambiente ....actual es: : ${environmentName}`);
 });
 
 const PORT = process.env.PORT || 3000;
