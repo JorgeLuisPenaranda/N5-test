@@ -9,6 +9,10 @@ WORKDIR /app
 # Copiar el código de la aplicación al contenedor
 COPY . .
 
+# Declare the environment variable to capture the build argument
+ARG ENVIRONMENT_NAME
+ENV ENVIRONMENT_NAME=${ENVIRONMENT_NAME}
+
 # Instalar dependencias
 RUN npm install
 
