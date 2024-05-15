@@ -36,6 +36,10 @@ jobs:
           echo "ENVIRONMENT_NAME2 is set to $ENVIRONMENT_NAME"
           echo "RAW:  $GITHUB_REF"
 
+      - name: Set environment variable based on branch
+        run: |
+          echo "ENVIRONMENT_NAME var is set to $ENVIRONMENT_NAME"      
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v3
         with:
