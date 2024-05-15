@@ -38,7 +38,7 @@ jobs:
         run: docker build -t n5test .
 
       - name: Tag Docker image
-        run: docker tag n5test 223964170867.dkr.ecr.us-east-1.amazonaws.com/n5test:n5test
+        run: docker tag n5test:latest 223964170867.dkr.ecr.us-east-1.amazonaws.com/n5test:latest
 
       - name: Push Docker image to AWS ECR
-        run: docker push 223964170867.dkr.ecr.us-east-1.amazonaws.com/n5test:n5test
+        run: docker push 223964170867.dkr.ecr.us-east-1.amazonaws.com/n5test:latest
