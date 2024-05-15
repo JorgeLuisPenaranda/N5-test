@@ -23,10 +23,10 @@ jobs:
           fi
 
       - name: Build Docker image
-        run: docker build -t n5-test .
+        run: docker build -t n5-test1 .
 
       - name: Tag Docker image
-        run: docker tag n5-test:latest https://public.ecr.aws/w6r4j2i8/n5-test-pub-09t4s73
+        run: docker tag n5-test1 public.ecr.aws/w6r4j2i8/n5-test-pub-09t4s73
 
       - name: Push Docker image to AWS ECR
         run: docker push https://public.ecr.aws/w6r4j2i8/n5-test-pub-09t4s73/n5-test:latest
