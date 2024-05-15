@@ -5,7 +5,7 @@ on:
     branches:
       - develop
       - testing
-      - jlpa
+      - main
 
 jobs:
   build-and-deploy:
