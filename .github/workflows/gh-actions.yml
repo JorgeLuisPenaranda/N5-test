@@ -31,6 +31,7 @@ jobs:
             echo "EN MAIN"
             echo "ENVIRONMENT_NAME1 is set to $ENVIRONMENT_NAME"
             echo ${{ env.ENVIRONMENT_NAME }}
+            echo "${{ env.Tests }} tests failed on CI"
           fi
           echo "ENVIRONMENT_NAME2 is set to $ENVIRONMENT_NAME"
           echo "RAW:  $GITHUB_REF"
