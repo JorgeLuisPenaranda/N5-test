@@ -26,8 +26,9 @@ jobs:
           elif [[ $GITHUB_REF == 'refs/heads/main' ]]; then
             echo "ENVIRONMENT_NAME=main" >> $GITHUB_ENV
             echo "EN MAIN"
+            echo "ENVIRONMENT_NAME1 is set to $ENVIRONMENT_NAME"
           fi
-          echo "ENVIRONMENT_NAME is set to $ENVIRONMENT_NAME"
+          echo "ENVIRONMENT_NAME2 is set to $ENVIRONMENT_NAME"
           echo "RAW:  $GITHUB_REF"
 
       - name: Configure AWS credentials
