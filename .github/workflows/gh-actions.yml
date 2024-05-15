@@ -21,6 +21,8 @@ jobs:
             echo "ENVIRONMENT_NAME=develop" >> $GITHUB_ENV
           elif [[ $GITHUB_REF == 'refs/heads/testing' ]]; then
             echo "ENVIRONMENT_NAME=testing" >> $GITHUB_ENV
+          elif [[ $GITHUB_REF == 'refs/heads/main' ]]; then
+            echo "ENVIRONMENT_NAME=main" >> $GITHUB_ENV
           fi
           echo "ENVIRONMENT_NAME is set to $ENVIRONMENT_NAME"
 
