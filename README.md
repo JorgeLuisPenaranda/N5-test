@@ -1,7 +1,7 @@
 
 # Documentación de Despliegue de Aplicación Web
 
-Este documento describe los pasos para configurar y desplegar una aplicación web en AWS ECS utilizando GitHub Actions para CI/CD. El proceso de despliegue incluye el envío de la imagen del contenedor Docker a Amazon ECR y la actualización de un servicio ECS para reflejar los cambios automáticamente.
+Este documento describe los pasos para configurar y desplegar la aplicación web en AWS ECS utilizando GitHub Actions para CI/CD. El proceso de despliegue incluye el envío de la imagen del contenedor Docker a Amazon ECR y la actualización de un servicio ECS para reflejar los cambios automáticamente.
 
 Requisitos previos
 * AWS Account: Se necesita una cuenta de AWS para crear y administrar recursos como ECS, ECR, IAM, etc.
