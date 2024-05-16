@@ -3,13 +3,13 @@
 # Usar la imagen de Node.js
 FROM node:14
 
-# Establecer el directorio de trabajo dentro del contenedor
+# Establece el directorio de trabajo dentro del contenedor
 WORKDIR /app
 
 # Copiar el código de la aplicación al contenedor
 COPY . .
 
-# Declare the environment variable to capture the build argument
+# Declara la variable de entorno
 ARG ENVIRONMENT_NAME
 ENV ENVIRONMENT_NAME=${ENVIRONMENT_NAME}
 
